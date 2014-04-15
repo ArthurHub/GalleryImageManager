@@ -1,0 +1,99 @@
+﻿// "Therefore those skilled at the unorthodox
+// are infinite as heaven and earth,
+// inexhaustible as the great rivers.
+// When they come to an end,
+// they bagin again,
+// like the days and months;
+// they die and are reborn,
+// like the four seasons."
+// 
+// - Sun Tsu,
+// "The Art of War"
+
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using GalleryImage.Common;
+
+namespace MyNamespace
+{{
+	/// <summary>
+	/// Handle image gallery for '{0}' images.<br/>
+	/// Allow to get image gallery part (a single image in the gallery) by property or by string key.
+	/// </summary>
+	public static class {0}Images
+	{{
+		#region Fields and Consts
+
+		/// <summary>
+		/// mapping between extension and the image rectangle in the gallery image.
+		/// </summary>
+		private static readonly Dictionary<string, Rectangle> _offsets = new Dictionary<string, Rectangle>(StringComparer.InvariantCultureIgnoreCase);
+
+		#endregion
+
+
+		/// <summary>
+		/// Get the gallery image that holds all the images.
+		/// </summary>
+		public static Image GalleryImage
+		{{
+			get {{ return CachedResources.{0}; }}
+		}}
+		
+        /// <summary>
+        /// Get all the keys of the image parts.
+        /// </summary>
+        public static IEnumerable<string> ImagePartsKeys
+        {{
+            get {{ return _offsets.Keys; }}
+        }}
+		{1}
+        /// <summary>
+        /// Get gallery image part by the given key.
+        /// </summary>
+        /// <param name="key">the key to get image part by</param>
+        /// <returns>image part, never null</returns>
+        public static GalleryImagePart GetImagePart(string key)
+        {{
+            return new GalleryImagePart(GalleryImage, GetOffset(key)); 
+        }}
+
+		/// <summary>
+		/// Get rectangle offset for image by the requested key.<br/>
+		/// </summary>
+		/// <param name="key">the key to get the image offset for</param>
+		/// <returns>image rectangle offset, default if failed to find</returns>
+		public static Rectangle GetOffset(string key)
+		{{
+			InitOffsets();
+    
+			if (!String.IsNullOrEmpty(key))
+			{{
+				Rectangle value;
+				if (_offsets.TryGetValue(key, out value))
+				{{
+					return value;
+				}}
+			}}
+
+			return {3};
+		}}
+
+
+		#region Private methods
+
+		/// <summary>
+		/// Init the mapping between {0} and the image rectangle offset in the image gallery.
+		/// </summary>
+		private static void InitOffsets()
+		{{
+			if(_offsets.Count == 0)
+			{{
+				{2}
+			}}
+		}}
+
+		#endregion
+	}}
+}}
