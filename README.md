@@ -12,8 +12,10 @@ Tool for creating and managing gallery images (single image build from multiple 
 ## Using the tool:
 
 The Gallery Image Manager tool has two flows:
+
 1. Take a collection of images to create a gallery image and a static class used to draw the image parts.
 2. Take the gallery image and the generated static class code to split the gallery image into the individual images it contains.
+
 This two functionalities allows for efficient management of the gallery image: adding, removing and changing.
 
 ## Demp app
