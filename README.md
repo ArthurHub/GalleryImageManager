@@ -1,4 +1,4 @@
-Gallery Image Manager
+Gallery Image Manager [![Build status](https://ci.appveyor.com/api/projects/status/uc9dpai21qkd3549)](https://ci.appveyor.com/project/ArthurHub/galleryimagemanager)
 =====================
 
 Tool for creating and managing gallery images (single image build from multiple small images).
@@ -6,8 +6,8 @@ Tool for creating and managing gallery images (single image build from multiple 
 ![Gallery image manager](https://raw.githubusercontent.com/ArthurHub/GalleryImageManager/master/figure1.png)
 
 ## Blog posts
-1. [Optimizing images usage in .NET – part 1](http://theartofdev.wordpress.com/2013/03/12/optimizing-image-usage-in-net-part-1/)
-2. [Optimizing images usage in .NET – part 2](http://theartofdev.wordpress.com/2013/06/03/optimizing-images-usage-in-net-part-2/)
+1. [Optimizing images usage in .NET – part 1](http://theartofdev.com/2013/03/12/optimizing-image-usage-in-net-part-1/)
+2. [Optimizing images usage in .NET – part 2](http://theartofdev.com/2013/06/03/optimizing-images-usage-in-net-part-2/)
 
 ## Using the tool:
 
